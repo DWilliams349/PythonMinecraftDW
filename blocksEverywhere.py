@@ -10,4 +10,4 @@ def randomBlockLocations(blockType, repeats):
         y = mc.getHeight(x, z)
         mc.setBlock(x, y, z, blockType)
         count += 1
-randomBlockLocations(57, 100)
+randomBlockLocations(57, 1000)
