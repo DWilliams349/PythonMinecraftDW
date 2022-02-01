@@ -15,16 +15,32 @@ def copyStructure(x1, y1, z1, x2,y2, z2):
     width = x2 - x1
     height = y2 - y1
     length = z2 - z1
-    
-    structure = []
-    
+
     print("Please wait...")
+    structure = []
+    for x in range(x1, x2+1):
+        
+        wall = []
+        for z in range(z1, z2+1):
+        
+        
+            stack = []
+            for y in range(y1, y2+1):
+                block = mc.getBlock(x, y, z)
+                stack.append(block)
+            
+            wall.append(stack)
+        structure.append(wall)
     
-    return structure
+        
+        
+    
+    print(structure)
 
 def buildStructure(x, y, z, structure):
     xStart = x
     yStart = y
+    zStart = z
     
     
 input("Move to the first corner and press enter in this window")
