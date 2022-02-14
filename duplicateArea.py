@@ -35,13 +35,24 @@ def copyStructure(x1, y1, z1, x2,y2, z2):
         
         
     
-    print(structure)
+    return structure
 
 def buildStructure(x, y, z, structure):
     xStart = x
     yStart = y
     zStart = z
     
+    for wall in structure:
+        for stack in wall:
+            for block in stack:
+                mc.setBlock(x, y, z, block)
+                y += 1
+            y = yStart
+            z += 1
+        z = zStart
+        x += 1
+    x = xStart
+            
     
 input("Move to the first corner and press enter in this window")
 pos = mc.player.getTilePos()
