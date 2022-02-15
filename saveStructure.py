@@ -48,5 +48,8 @@ z2 = pos2.z
 
 structure = copyStructure( x1, y1, z1, x2, y2, z2)
 
-SaveStructure = open("SaveStructure.txt", "wb")
-pickle.dump(structure, SaveStructure)
+
+
+#saveStructure = open("SaveStructure.txt", "wb")
+with open('saveStructure1.pickle', 'wb') as structureFile:
+    pickle.dump(structure, structureFile)
